@@ -6,6 +6,7 @@ FILES = atpg.o main.o input.o level.o sim.o podem.o init_flist.o faultsim.o disp
 
 all : $(FILES)
 	g++ $(CFLAGS) $(FILES) -lm -o atpg
+	ctags -R *
 atpg.o : atpg.h atpg.cpp
 	g++ $(CFLAGS) -c atpg.cpp
 main.o : atpg.h main.cpp
